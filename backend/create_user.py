@@ -1,12 +1,5 @@
-"""
-Script to create a default user for the application.
-Run: python manage.py shell < create_user.py
-Or run interactively in Django shell.
-"""
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
-
-# Create default user if it doesn't exist
 username = 'admin'
 password = 'admin'
 
