@@ -143,25 +143,25 @@ The frontend will run on `http://localhost:3000` and automatically open in your 
 chemical_equip_parameter_visualizer/
 ├── backend/
 │   ├── api/
-│   │   ├── models.py          # Dataset and Equipment models
-│   │   ├── views.py           # API views (upload, summary, history, PDF, auth)
-│   │   ├── urls.py            # API URL routing
-│   │   └── serializers.py     # Data serializers
+│   │   ├── models.py          
+│   │   ├── views.py           
+│   │   ├── urls.py            
+│   │   └── serializers.py     
 │   ├── config/
-│   │   ├── settings.py        # Django settings
-│   │   └── urls.py            # Main URL configuration
+│   │   ├── settings.py        
+│   │   └── urls.py
 │   ├── manage.py
-│   └── db.sqlite3             # SQLite database
+│   └── db.sqlite3             
 ├── frontend-web/
 │   ├── src/
-│   │   ├── App.js             # Main React component
-│   │   ├── index.js           # React entry point
-│   │   └── index.css          # Global styles
+│   │   ├── App.js             
+│   │   ├── index.js           
+│   │   └── index.css          
 │   ├── public/
 │   ├── package.json
 │   └── package-lock.json
-├── frontend-desktop/          # Desktop application (optional)
-└── Venv/                      # Python virtual environment
+├── frontend-desktop/          
+└── Venv/                      
 ```
 
 ## Usage
@@ -354,7 +354,7 @@ Your CSV file must follow this exact format:
 
 ## Security Notes
 
-⚠️ **Important for Production:**
+ **Important for Production:**
 - Change the default `SECRET_KEY` in `settings.py`
 - Use strong passwords for all users
 - Enable HTTPS in production
@@ -387,6 +387,3 @@ For issues and questions:
 - UI components powered by React and Chart.js
 - PDF generation using ReportLab
 
----
-
-**Happy Visualizing! 📊**
