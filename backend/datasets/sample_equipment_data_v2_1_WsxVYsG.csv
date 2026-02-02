@@ -1,0 +1,16 @@
+Equipment Name,Type,Flowrate,Pressure,Temperature
+Pump C,Positive Displacement Pump,95.4,6.2,82
+Pump D,Positive Displacement Pump,102.8,6.5,85
+Valve C,Gate Valve,70.0,3.8,58
+Valve D,Gate Valve,75.3,4.0,60
+Reactor C,Polymer Reactor,250.5,13.8,280
+Reactor D,Polymer Reactor,265.2,14.2,295
+Heat Exchanger C,Plate Heat Exchanger,165.0,7.2,130
+Heat Exchanger D,Plate Heat Exchanger,170.6,7.5,135
+Tank C,Cryogenic Tank,55.0,1.8,-150
+Tank D,Cryogenic Tank,58.5,2.0,-145
+Compressor C,Air Compressor,160.3,8.0,90
+Compressor D,Air Compressor,168.9,8.4,93
+Filter C,Carbon Filter,65.7,3.2,50
+Filter D,Carbon Filter,68.4,3.4,52
+Boiler B,Steam Boiler,230.0,13.0,320
