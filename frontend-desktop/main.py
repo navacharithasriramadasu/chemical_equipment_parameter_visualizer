@@ -4,7 +4,6 @@ from PyQt5.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QPushButton
                              QWidget, QFileDialog, QLabel, QHBoxLayout, QTableWidget, QTableWidgetItem)
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib.pyplot as plt
-
 API_URL = "http://localhost:8000/api"
 
 class MainWindow(QMainWindow):
