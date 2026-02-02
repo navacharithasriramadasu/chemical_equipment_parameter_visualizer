@@ -15,12 +15,9 @@ class MainWindow(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        # Layouts
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         main_layout = QVBoxLayout(central_widget)
-
-        # Controls
         btn_layout = QHBoxLayout()
         self.upload_btn = QPushButton("Upload CSV")
         self.upload_btn.clicked.connect(self.upload_file)
@@ -29,12 +26,10 @@ class MainWindow(QMainWindow):
         self.status_label = QLabel("Ready")
         btn_layout.addWidget(self.status_label)
         main_layout.addLayout(btn_layout)
-
-        # Stats Area
+     
         self.stats_label = QLabel("Upload a file to see stats.")
         main_layout.addWidget(self.stats_label)
 
-        # Matplotlib Figure
         self.figure = plt.figure()
         self.canvas = FigureCanvas(self.figure)
         main_layout.addWidget(self.canvas)
@@ -47,7 +42,6 @@ class MainWindow(QMainWindow):
             self.status_label.setText("Uploading...")
             files = {'file': open(file_path, 'rb')}
             try:
-                # 1. Upload to Django
                 response = requests.post(f"{API_URL}/upload/", files=files)
                 if response.status_code == 201:
                     dataset_id = response.json()['id']
@@ -58,22 +52,15 @@ class MainWindow(QMainWindow):
                 self.status_label.setText(f"Error: {e}")
 
     def fetch_data(self, dataset_id):
-        # 2. Fetch Analysis from Django
         response = requests.get(f"{API_URL}/summary/{dataset_id}/")
         data = response.json()
-        
-        # Update Stats Text
         stats_text = (f"Total Count: {data['total_count']} | "
                       f"Avg Temp: {data['averages']['avg_temp']:.2f} | "
                       f"Avg Pressure: {data['averages']['avg_press']:.2f}")
         self.stats_label.setText(stats_text)
         self.status_label.setText("Analysis Complete")
-
-        # Update Chart (Matplotlib)
         self.figure.clear()
         ax = self.figure.add_subplot(111)
-        
-        # Prepare Data
         types = [d['eq_type'] for d in data['distribution']]
         counts = [d['count'] for d in data['distribution']]
         
