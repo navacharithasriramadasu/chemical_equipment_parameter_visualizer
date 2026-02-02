@@ -4,12 +4,12 @@ A full-stack web application for visualizing and analyzing chemical equipment pa
 
 ## Features
 
-- 📊 **Interactive Data Visualization**: Upload CSV files and view equipment data with interactive charts
-- 📈 **Real-time Analytics**: View summary statistics including averages for temperature, pressure, and flowrate
-- 📋 **History Management**: Access the last 5 uploaded datasets with quick loading
-- 📄 **PDF Report Generation**: Download comprehensive PDF reports with statistics and data tables
-- 🔐 **Secure Authentication**: Token-based authentication system
-- 🎨 **Modern UI**: Clean, responsive interface built with React
+-  **Interactive Data Visualization**: Upload CSV files and view equipment data with interactive charts
+-  **Real-time Analytics**: View summary statistics including averages for temperature, pressure, and flowrate
+-  **History Management**: Access the last 5 uploaded datasets with quick loading
+-  **PDF Report Generation**: Download comprehensive PDF reports with statistics and data tables
+- **Secure Authentication**: Token-based authentication system
+-  **Modern UI**: Clean, responsive interface built with React
 
 ## Tech Stack
 
